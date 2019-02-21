@@ -1,0 +1,27 @@
+branches:
+    only:
+    - unittests
+language: python
+matrix:
+    include:
+    - os: linux
+      dist: xenial
+      python: "2.7"
+    - os: linux
+      dist: xenial
+      python: "3.5"
+      sudo: true
+    - os: linux
+      dist: xenial
+      python: "3.6"
+      sudo: true
+    - os: linux
+      dist: xenial
+      python: "3.7"
+      sudo: true
+before_install:
+    - sudo apt-get install libhdf5-serial-dev
+    - pip install codecov configparser matplotlib nose numpy scipy tables
+    - pip install https://github.com/revoltek/losoto/archive/master.zip
+script:
+    - python -m unittest test_h5
