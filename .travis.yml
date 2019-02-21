@@ -18,7 +18,7 @@ matrix:
       sudo: true
 before_install:
     - sudo apt-get install libhdf5-serial-dev
-    - pip install codecov configparser matplotlib nose numpy scipy tables
+    - pip install codecov configparser nose numpy scipy tables
     - pip install https://github.com/revoltek/losoto/archive/master.zip
 script:
     - python -m unittest test_h5
