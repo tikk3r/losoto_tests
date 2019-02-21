@@ -1,2 +1,2 @@
 # losoto_tests
-A bunch of tests.
+https://travis-ci.com/tikk3r/losoto_tests.svg?branch=master
